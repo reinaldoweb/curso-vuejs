@@ -54,7 +54,6 @@ export default {
   }
 }
 </script>
-
 <style scoped>
 section {
   padding: 50px 0;
