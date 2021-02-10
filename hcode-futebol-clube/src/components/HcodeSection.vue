@@ -24,26 +24,26 @@
 
 
 <script>
-import HcodeSectionBanner from "./HcodeSectionBanner";
-import HcodeSectionNews from "./HcodeSectionNews";
-import HcodeInput from "./HcodeInput";
+import HcodeSectionBanner from "./HcodeSectionBanner"
+import HcodeSectionNews from "./HcodeSectionNews"
+import HcodeInput from "./HcodeInput"
 
 export default {
   components: {
     HcodeSectionBanner,
     HcodeSectionNews,
-    HcodeInput,
+    HcodeInput
   },
   data() {
     return {
-      myClub: "Hcode Treinamentos",
-    };
+      myClub:"Hcode Treinamentos"
+    }
   },
 
   props: {
-    championship: String,
-  },
-};
+    championship: String
+  }
+}
 </script>
 
 <style scoped>

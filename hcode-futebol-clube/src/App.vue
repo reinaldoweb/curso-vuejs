@@ -28,7 +28,7 @@ export default {
   },
   methods:{
     changeChampionship(value){
-      this.championship = value;
+      this.championship = value
     }
   }
 }
