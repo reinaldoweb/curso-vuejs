@@ -1,2 +1,2 @@
 <?php
-echo 'teste';
+echo 'Esse arquivo foi editado';
