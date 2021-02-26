@@ -9,7 +9,6 @@
 
     <component :is="currentComponent"></component>
 
-
     <div class="container">
       <div class="row my-club mt-5">
         <div class="col-6">Seu clube é: {{ myClub }}</div>
@@ -22,27 +21,34 @@
 </template>
 
 <script>
-import HcodeSectionBanner from "./HcodeSectionBanner"
-import HcodeInput from "./HcodeInput"
+import HcodeSectionBanner from "./HcodeSectionBanner";
+import HcodeInput from "./HcodeInput";
+import { mapState } from "vuex";
 
 export default {
   components: {
     HcodeSectionBanner,
-    HcodeSectionNews: ()=> import('./HcodeSectionNews'),//Assync Component
-    HcodeInput
+    HcodeSectionNews: () => import("./HcodeSectionNews"), //Assync Component
+    HcodeInput,
   },
   data() {
     return {
-      myClub:"Hcode Treinamentos"
-      
+      myClub: "Hcode Treinamentos",
     }
   },
 
   props: {
     championship: String,
-    currentComponent: String
+    currentComponent: String,
+  },
+  computed: {
+    ...mapState(['championship']),
+
+    ...mapState({
+      myClub: "clubName",
+    })
   }
-}
+};
 </script>
 
 <style scoped>
