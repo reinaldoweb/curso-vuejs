@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     championship: 'Campeonato Brasileiro',
-    ClubName: 'Hcode Treinamentos',
+    clubName: 'Hcode Treinamentos',
     news: [
       {
         id: 1,
@@ -54,6 +54,17 @@ export default new Vuex.Store({
   mutations:{
     setChampionchip(state, newValue){
       state.championship = newValue;
+    },
+    setClubName(state, newName){
+      state.clubName = newName;
+    }
+  }, 
+  actions:{
+    changeChampionship(context, value){
+      context.commit('setChampionsip', value);
+    },
+    updateClubName(context, value){
+      context.commit('setClubName', value);
     }
   }
 

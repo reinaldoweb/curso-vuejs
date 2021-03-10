@@ -12,7 +12,7 @@
       <a href="#" @click.prevent="$emit('change-component', 'news')" class="btn mr-r">Notícias</a>
       <a href="#" class="btn mr-r">Classificações</a>
 
-      <select name="championship" id="championship" class="form-control" @change="$emit('select-championship', $event.target.value)">
+      <select name="championship" id="select-championship" class="form-control" @change="$emit('select-championship', $event.target.value)">
       
         <option value="">Selecione um campeonato</option>
         <option value="Capeonato Brasileiro" selected>Campeonato Brasileiro</option>

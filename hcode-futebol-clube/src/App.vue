@@ -1,12 +1,11 @@
 <template>
   <div id="app">
     <HcodeHeader 
-    @select-championship="changeChampionship"
-    @change-component="changeComponent"
+    @select-championship='changeChampionship'
+    @change-component='changeComponent'
      />
 
     <HcodeSection 
-    :championship="championship" 
     :current-component="currentSectionComponent"
     />
 
@@ -18,7 +17,7 @@
 import HcodeFooter from  './components/HcodeFooter'
 import HcodeHeader from  './components/HcodeHeader'
 import HcodeSection from './components/HcodeSection'
-import { mapMutations } from 'vuex'
+import { mapActions } from 'vuex'
 
 export default {
   name: "App",
@@ -34,13 +33,12 @@ export default {
     }
   },
   methods:{
-    ...mapMutations({
-      changeChampionship: 'setChampionship'
-    }),
-
+    ...mapActions(['changeChampionship']),
+      
     changeComponent(value){
       
       let component;
+
       switch(value){
         case 'home':
           default:
