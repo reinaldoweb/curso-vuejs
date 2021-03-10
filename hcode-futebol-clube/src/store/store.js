@@ -50,6 +50,11 @@ export default new Vuex.Store({
       return state.news;
     }
 
+  },
+  mutations:{
+    setChampionchip(state, newValue){
+      state.championship = newValue;
+    }
   }
 
 

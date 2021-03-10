@@ -25,6 +25,7 @@ import HcodeSectionBanner from "./HcodeSectionBanner";
 import HcodeInput from "./HcodeInput";
 import { mapGetters } from "vuex";
 
+
 export default {
   components: {
     HcodeSectionBanner,
@@ -45,8 +46,8 @@ export default {
       championship: 'getChampionship',
       myClube: 'getClubName'
     })
-
   }
+
   }
 </script>
 
