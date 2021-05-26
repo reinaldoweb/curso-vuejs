@@ -2,22 +2,22 @@ export default{
 
   state:{
 
-    clubName: 'Hcode Treinamentos'
+    clubeName: 'Hcode Treinamentos'
   },
 
   getters: {
-    getClubName(state){
-      return state.clubName
+    getClubeName(state){
+      return state.clubeName
     }
   },
   mutations:{
-    setClubName(state, newName){
-      state.clubName = newName;
+    setClubeName(state, newName){
+      state.clubeName = newName;
     }
   },
   actions:{
-    updateClubName(context, value){
-      context.commit('setClubName', value)
+    updateClubeName(context, value){
+      context.commit('setClubeName', value)
     }
   }
 

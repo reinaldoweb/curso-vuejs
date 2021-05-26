@@ -1,7 +1,7 @@
 <template>
   
-  <input type="text" :value="clubName" 
-  @keyup="updateClubName($event.target.value)" 
+  <input type="text" :value="clubeName" 
+  @keyup="updateClubeName($event.target.value)" 
   class="form-control" placeholder="Digite seu clube">
 
 </template>
@@ -11,7 +11,7 @@ export default{
   computed: mapGetters({
    clubName: 'getclubName'
     }),
-  methods: mapActions(['updateClubName'])
+  methods: mapActions(['updateClubeName'])
   
 }
 </script>

@@ -11,7 +11,7 @@
 
     <div class="container">
       <div class="row my-club mt-5">
-        <div class="col-6">Seu clube é: {{ myClub }}</div>
+        <div class="col-6">Seu clube é: {{ myClube }}</div>
         <div class="col-6">
           <HcodeInput />
         </div>
@@ -44,7 +44,7 @@ export default {
 
     ...mapGetters({
       championship: 'getChampionship',
-      myClub: 'getClubName'
+      myClube: 'getClubeName'
     })
   }
 
