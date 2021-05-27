@@ -5,9 +5,7 @@
     @change-component='changeComponent'
      />
 
-    <HcodeSection 
-    :current-component="currentSectionComponent"
-    />
+    <HcodeSection/>
 
     <HcodeFooter />
   </div>
@@ -29,7 +27,6 @@ export default {
 
   data() {
     return {
-      currentSectionComponent: 'HcodeSectionBanner'
     }
   },
   methods:{
@@ -44,7 +41,6 @@ export default {
           default:
             component = 'HcodeSectionBanner'
             break;
-
         case 'news':
           component="HcodeSectionNews"
           break;
