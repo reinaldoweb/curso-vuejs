@@ -29,7 +29,15 @@ export default {
      return this.$store.getters.getNewsFromId(this.$route.params.idnotice);
    }
  },
- mixins:[Utils]
+ mixins:[Utils],
+ beforeRouteEnter: (to, from, next) => {
+   
+   let params = to.params;
+    if(!parseInt(params.idnotice) > 0){
+      next('/');
+    }
+   next();
+ }
 }
 </script>
 
