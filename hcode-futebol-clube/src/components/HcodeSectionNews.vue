@@ -10,7 +10,7 @@
         :img-info="notice.imgInfo"
         :news-date="notice.date"
         >
-        <template #title> <h2 @click="goToPage('/notice')">{{ notice.title }}</h2></template>
+        <template #title> <h2 @click="goToPage(`/news/${notice.id}`)">{{ notice.title }}</h2></template>
          <p> {{ notice.content | truncate(200) }}</p>
       </HcodeSectionNewsIndividual>
     </div>
