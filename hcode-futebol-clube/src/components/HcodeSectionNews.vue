@@ -10,7 +10,11 @@
         :img-info="notice.imgInfo"
         :news-date="notice.date"
         >
-        <template #title> <h2 @click="goToPage(`/news/${notice.id}`)">{{ notice.title }}</h2></template>
+        <template #title>
+
+        <router-link :to="{ name:'notice', params: {idnotice:notice.id} }" tag="h2">{{ notice.title }}</router-link>
+        
+        </template>
          <p> {{ notice.content | truncate(200) }}</p>
       </HcodeSectionNewsIndividual>
     </div>
@@ -36,9 +40,9 @@ export default {
 
   },
   methods: {
-    goToPage(page){
-      this.$router.push(page);
-    }
+    // goToPage(page){
+    //   this.$router.push(page);
+    // }
   }
 }
 </script>
