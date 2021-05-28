@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import Home from './../components/HcodeSectionBanner'
 import News from './../components/HcodeSectionNews'
+import Notice from './../components/HcodeSectionNewsNotice'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,10 @@ export default new VueRouter({
   {
     path:'/news',
     component:News
+  },
+  {
+    path:'/notice',
+    component: Notice
   }]
 
 })
